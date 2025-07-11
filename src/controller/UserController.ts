@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import { UserDAO } from '../dao/UserDAO';
+import { UserDAO } from '../dao/Userdao';
 
 const dao = new UserDAO();
 

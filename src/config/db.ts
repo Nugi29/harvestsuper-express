@@ -1,7 +1,7 @@
 import { Sequelize } from 'sequelize';
 
 export const sequelize = new Sequelize(
-  'mydb',       // database name
+  'harvestsuper',       // database name
   'root',       // username
   '1234',   // password
   {
