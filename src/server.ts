@@ -2,7 +2,7 @@ import app from './app';
 import { connectDB } from './config/db';
 import { User } from './entity/User';
 
-const PORT = 3000;
+const PORT = 8080;
 
 const start = async () => {
   await connectDB();
