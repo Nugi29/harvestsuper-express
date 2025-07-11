@@ -3,6 +3,7 @@ import userRoutes from './routes/UserRoutes';
 import genderRoutes from './routes/GenderRoutes';
 import emptypeRoutes from './routes/EmptypeRoutes';
 import designationRoutes from './routes/DesignationRoutes';
+import empstatusRoutes from './routes/EmpstatusRoutes';
 
 const app = express();
 app.use(express.json());
@@ -13,6 +14,7 @@ app.use('/users', userRoutes);
 app.use('/genders', genderRoutes);
 app.use('/emptypes', emptypeRoutes);
 app.use('/designations', designationRoutes);
+app.use('/empstatuses', empstatusRoutes);
 
 
 
