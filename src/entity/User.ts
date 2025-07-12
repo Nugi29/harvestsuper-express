@@ -14,6 +14,14 @@ export const User = sequelize.define('User', {
   email: {
     type: DataTypes.STRING,
     unique: true
+  },
+  employeeId: {
+    type: DataTypes.INTEGER,
+    allowNull: true,
+    references: {
+      model: 'employee',
+      key: 'id'
+    }
   }
 }, {
   tableName: 'users',

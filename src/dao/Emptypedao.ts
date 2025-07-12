@@ -1,4 +1,4 @@
-import { Emptype } from "../entity/EmpType";
+import { Emptype } from "../entity/Emptype";
 
 
 export class EmptypeDAO {
