@@ -1,5 +1,6 @@
 import { Sequelize } from 'sequelize';
 
+// Create sequelize instance
 export const sequelize = new Sequelize(
   'harvestsuper',       // database name
   'root',       // username
@@ -7,13 +8,18 @@ export const sequelize = new Sequelize(
   {
     host: 'localhost',
     dialect: 'mysql',
-    logging: false, // disable SQL logs
+    logging: false, // Disable SQL logs
   }
 );
 
 export const connectDB = async () => {
   try {
     await sequelize.authenticate();
+    
+    // Initialize models after connection is established
+    const { initializeModels } = await import('../models');
+    initializeModels();
+    
     console.log('✅ MySQL connected!');
   } catch (error) {
     console.error('❌ MySQL connection error:', error);
