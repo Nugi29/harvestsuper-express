@@ -8,10 +8,7 @@ import {
     ForeignKey
 } from 'sequelize';
 import { sequelize } from '../config/db';
-import { Gender } from './Gender';
-import { Emptype } from './Emptype';
-import { Designation } from './Designation';
-import { Empstatus } from './Empstatus';
+
 
 export class Employee extends Model<InferAttributes<Employee>, InferCreationAttributes<Employee>> {
     declare id: CreationOptional<number>;
